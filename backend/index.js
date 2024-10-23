@@ -18,6 +18,17 @@ mongoose.connect("mongodb+srv://sumithra:sumithra@cluster0.bis5s.mongodb.net/sof
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/users', userRoutes);
 
+app.get("/", (req, res) => {
+  const serverStatus = {
+    status: "Server is running smoothly 🚀",
+    uptime: process.uptime(),
+    timestamp: new Date().toLocaleString(),
+    message: "Welcome to the Zynapse API 🎉",
+  };
+
+  res.status(200).json(serverStatus);
+});
+
 
 const PORT =  8000;
 app.listen(PORT, () => {
