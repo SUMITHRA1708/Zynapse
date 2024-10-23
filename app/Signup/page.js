@@ -30,7 +30,7 @@ export default function Signup() {
       const response = await axios.post(`${baseurl}/api/users/register`, formData);
       
       if (response.status === 201) {
-        toast.success('Registration successful! Redirecting to dashboard...');
+        toast.success('Registration successful! Redirecting to Login Page...');
         
         setTimeout(() => {
           router.push('/Login');

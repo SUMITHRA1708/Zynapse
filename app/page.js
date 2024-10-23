@@ -1,14 +1,37 @@
 "use client"
 import Link from "next/link";
 import Navbar from "./Components/Navbar";
+import HeroSection from "./Components/HeroSection"
 import { FaUserFriends, FaComments, FaChartLine } from "react-icons/fa";
 import Slider from "react-slick";
+
+
+const slidesData = [
+  {
+    image: "https://fitatambaram.in/wp-content/uploads/2022/04/Important-soft-skills-for-career-enhancement-768x384.jpg",
+    title: "Master Soft Skills, Empower Your Future with AI",
+    description: "Learn communication, leadership, and emotional intelligence with AI-driven personalized insights and real-time feedback."
+  },
+  {
+    image: "https://images.shiksha.com/mediadata/images/articles/1410946752phpF3RYBj.jpeg",
+    title: "Unlock Your Potential with Tailored Learning",
+    description: "Discover personalized growth paths designed to enhance your skills and confidence."
+  },
+  {
+    image: "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/teaser_image/blog_entry/2023-01/AdobeStock_457924302.jpg?h=10933cae&itok=ASkrfKCa",
+    title: "Achieve Greater Success with AI Insights",
+    description: "Utilize advanced AI tools to track your progress and achieve your career goals."
+  },
+];
+
 
 export default function Home() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
+    autoplay:true,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -18,7 +41,53 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-    
+      <section id="hero" className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center text-center">
+          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+            Master Soft Skills, Empower Your Future with AI
+          </h1>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Learn communication, leadership, and emotional intelligence with AI-driven personalized insights and real-time feedback.
+          </p>
+          
+          {/* Carousel */}
+          <div className="mt-8 w-full max-w-2xl mx-auto">
+            <Slider {...settings}>
+              <div>
+                <img
+                  className="w-full h-96 rounded-lg shadow-lg"
+                  src="https://fitatambaram.in/wp-content/uploads/2022/04/Important-soft-skills-for-career-enhancement-768x384.jpg"
+                  alt="Teamwork"
+                />
+              </div>
+              <div>
+                <img
+                  className="w-full h-96 rounded-lg shadow-lg"
+                  src="https://images.shiksha.com/mediadata/images/articles/1410946752phpF3RYBj.jpeg"
+                  alt="Leadership"
+                />
+              </div>
+              <div>
+                <img
+                  className="w-full h-96 rounded-lg shadow-lg"
+                  src="https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/teaser_image/blog_entry/2023-01/AdobeStock_457924302.jpg?h=10933cae&itok=ASkrfKCa"
+                  alt="Communication"
+                />
+              </div>
+            </Slider>
+          </div>
+
+          <div className="mt-8">
+            <a
+              href="#"
+              className="inline-block px-8 py-3 bg-blue-600 text-white font-medium text-lg rounded-md hover:bg-blue-700"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </section>
+
 
       {/* About Section */}
       <section id="about" className="bg-gray-100 py-16">

@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import Link from "next/link";
-
 import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const HeroSection = ({ slides }) => {
   const settings = {
@@ -19,7 +20,7 @@ const HeroSection = ({ slides }) => {
     <section id="hero" className="relative w-full h-screen">
       <Slider {...settings} className="absolute inset-0">
         {slides.map((slide, index) => (
-          <div key={index} className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url(${slide.image})` }}>
+          <div key={index} className="w-full h-full" style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-50">
               <h1 className="text-4xl font-extrabold sm:text-5xl">{slide.title}</h1>
               <p className="mt-4 text-lg max-w-2xl mx-auto">{slide.description}</p>
