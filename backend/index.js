@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 
 
-app.use(cors());
+app.use(cors("*"));
 app.use(express.json());
 
 mongoose.connect("mongodb+srv://sumithra:sumithra@cluster0.bis5s.mongodb.net/softskillapp")
