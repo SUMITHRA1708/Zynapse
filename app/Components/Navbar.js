@@ -6,10 +6,10 @@ function Navbar() {
         <div>
             <p className="text-2xl font-semibold">Zynapse</p>
         </div>
-        <div className='flex gap-3'>
+        <div className='flex items-center gap-4'>
             <p>About</p>
             <p>Contact</p>
-            <p>Get Started</p>
+            <p className="bg-blue-600 cursor-pointer text-white rounded-lg px-5 py-2">Get Started</p>
         </div>
     </div>
   )
