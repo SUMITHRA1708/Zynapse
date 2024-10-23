@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { Suspense } from 'react'
 
 const skillsContent = {
   communication: {
@@ -42,6 +43,7 @@ export default function SkillDetail() {
   if (!skillData) return <div>Loading...</div>;
 
   return (
+  <Suspense>
     <div className="min-h-screen bg-gray-50 p-6">
     <h1 className="text-3xl font-bold">{skillData.title}</h1>
     <p className="mt-4 text-lg">{skillData.description}</p>
@@ -49,5 +51,6 @@ export default function SkillDetail() {
       Back to Skills
     </Link>
   </div>
+  </Suspense>
   );
 }
