@@ -44,8 +44,8 @@ const SkillContent = ({ skill }) => {
 };
 
 const SkillDetail = () => {
-  const router = useSearchParams();
-  const skill = router.get('id');
+  const searchParams = useSearchParams();
+  const skill = searchParams.get('id');
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
