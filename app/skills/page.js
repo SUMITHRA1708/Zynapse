@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import {  useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 
 const skillsContent = {
@@ -43,7 +43,7 @@ const SkillContent = ({ skill }) => {
   );
 };
 
-export default function SkillDetail() {
+const SkillDetail = () => {
   const router = useSearchParams();
   const skill = router.get('id');
 
@@ -52,4 +52,6 @@ export default function SkillDetail() {
       {skill ? <SkillContent skill={skill} /> : <div>Loading...</div>}
     </Suspense>
   );
-}
+};
+
+export default SkillDetail;
