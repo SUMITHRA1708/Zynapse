@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function SoftSkills() {
   const skills = [
-    { name: "Communication", url: "/softskills/communication" },
-    { name: "Teamwork & Collaboration", url: "/softskills/teamwork" },
-    { name: "Problem-Solving", url: "/softskills/problem-solving" },
-    { name: "Emotional Intelligence", url: "/softskills/emotional-intelligence" },
-    { name: "Leadership", url: "/softskills/leadership" },
+    { name: "Communication", url: "/skills?id=communication" },
+    { name: "Teamwork & Collaboration", url: "/skills?id=teamwork" },
+    { name: "Problem-Solving", url: "/skills?id=problem-solving" },
+    { name: "Emotional Intelligence", url: "/skills?id=emotional-intelligence" },
+    { name: "Leadership", url: "/skills?id=leadership" },
   ];
 
   return (
